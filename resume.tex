@@ -12,7 +12,7 @@
 \usepackage[scale=0.75]{geometry}
 \usepackage{url}
 
-\firstname{Samuel}
+\firstname{Samuel A.}
 \familyname{Mercier}
 %% \title{Résumé}
 %%\address{2809 Covington St.}{West Lafayette, IN 47906}
@@ -33,43 +33,54 @@
 \makecvtitle
 \vspace{-40pt}
 \section{Education}
-\cventry{December 2019}{B.S. in Mathematics, Minor: Computer Science, Philosophy}{Purdue University ({\small College of Science, Honors College})}{West Lafayette, IN}{}{}
-\cvitem{}{\emph{Relevant Course Work} CS 381 \textit{Intro to Algorithm Analysis}, CS 252 \textit{Systems Programming}, STAT 416 \textit{Probability}, MA 454 \textit{Galois Theory}, MA 572 \textit{Algebraic Topology}, MA 553 \textit{Algebra}}
-\cvitemwithcomment{}{\textbf{Awards:} Purdue Presidential Scholarship \& Purdue Marquis Scholarship}{Fall 2015--Present}
-\cvitemwithcomment{}{\textbf{Honors:} Dean's List}{5 of 6 semesters}
+\cventry{May 2020}{B.S. in Mathematics, B.S. in Computer Science Minor: Philosophy}{Purdue University ({\small College of Science, Honors College})}{West Lafayette, IN}{}{}
+\cvitem{}{\emph{Relevant Course Work} CS 381 \textit{Intro to Algorithm Analysis}, CS 252 \textit{Systems Programming}, MA 572 \textit{Algebraic Topology}, MA 553 \textit{Algebra}}
+\cvitemwithcomment{}{\textbf{Awards:}
+  Purdue Presidential Scholarship \& Purdue Marquis Scholarship}{Fall 2015--Present}
+\cvitemwithcomment{}{Thomas Arai Scholarship}{Spring 2019}
+\cvitemwithcomment{}{Mitch Daniels Early Graduate Scholarship}{Fall 2015}
+\cvitemwithcomment{}{\textbf{Honors:} Dean's List}{6 of 7 semesters}
 \cvitemwithcomment{}{The Outstanding Senior Mathematics Major}{Spring 2019}
 
-\section{Technical Experience}
-\cvitem{}{\emph{Programming Languages/Frameworks}}
+
+\section{Experience}
+\subsection{\textbf{Work Experience -- Software Engineering}}
+\cvitem{}{\textbf{Programming Languages/Frameworks}}
 \cvlistdoubleitem{Proficient: C/C++ \& JavaScript}{Familiar: Elixir, Emacs Lisp, Java, Python, \& Ruby}
 
-\section{Work Experience -- Software Engineering}
-\cvitemwithcomment{}{\textbf{Software Engineer Intern} MongoDB -- Query Team}{May 2018--August 2018 \& May 2019--August 2019}
-Working on the query language \& database management system.
-Implemented part of a new index type.
-Will return in summer 2019.
+\cvitemwithcomment{}{\textbf{Software Engineer Intern} Affirm (San Francisco) -- Risk Engineering Team}{September 2019--November 2019}
+Expanded the functionality of the underwriting microservice.
+Made loan decision tasks asynchronous.
+Expanded integration testing of loan decisioning.
+\\
+\textit{Technologies:} Python, SQL, Shell scripting, \& Docker.
+\\
+\cvitemwithcomment{}{\textbf{Software Engineer Intern} MongoDB (New York) -- Query Team}{May 2018--August 2018 \& May 2019--Present}
+Implemented a new index type which can index all fields of all documents in a given collection.
+Sped up \$lookup/join queries by 28x according to performance tests.
+Recovered technical debt by rearchitecting projection execution.
 \\
 \textit{Technologies:} C++, Python (for testing), \& JavaScript (for testing).
 \\
-\cvitemwithcomment{}{\textbf{Software Engineer Intern} MongoDB -- Monitoring Team}{May 2017--August 2017}
+\cvitemwithcomment{}{\textbf{Software Engineer Intern} MongoDB (New York) -- Monitoring Team}{May 2017--August 2017}
 Researched and implemented time series analysis techniques for anomaly detection for their ``DaaS'' platform. Integrated into existing alerts framework to create automated anomaly detection alerts.
 \\
 \textit{Technologies:} Java \& MongoDB.
 \\
 \cvitemwithcomment{}{\textbf{Web Development Intern in Support of NASA Systems Engineering} NASA JSC}{January 2017--May 2017}
 Developed requirement management software used throughout NASA.
+Isolated state, and added routing.
 \\
 \textit{Technologies:} JavaScript, Node, Angular 1.x, Brunch, \& Redux.
 \\
-\cvitemwithcomment{}{\textbf{Software Engineer Intern Fullstack} Springbuk}{June 2016--August 2016}
-As an intern project, led development on an onboarding application for new customers.
-Worked as a normal software engineer on their Rails web application.
-Improved frontend/backend communication.
+\cvitemwithcomment{}{\textbf{Software Engineer Intern Fullstack} Springbuk (Indianapolis)}{June 2016--August 2016}
+Led development on an external onboarding application.
+Improved frontend/backend communication of product.
 \\
 \textit{Technologies:} PostgreSQL with ActiveRecord as a wrapper, Ruby, Ruby on Rails, \& JQuery.
-\section{Work Experience -- Teaching}
+\subsection{\textbf{Work Experience -- Teaching}}
 \cvitemwithcomment{}{\textbf{MA 161/162 Undergraduate Teaching Assistant}}{August 2018--Present}
-Answer questions with students in ``flipped classroom'' for MA 161/162 (Calculus I/II).
+Answer questions with students in ``flipped classroom'' for MA 161/162 (\textit{Calculus I/II}).
 \\
 \cvitemwithcomment{}{\textbf{CS 252 Undergraduate Teaching Assistant}}{January 2018--May 2018 \& August 2018--Present}
 Assist in teaching CS 252 \textit{Systems Programming} in weekly lab classes \& preparing materials (labs, exams, etc.)
@@ -79,15 +90,16 @@ Assist in teaching CS 240 \textit{Programming in C} in weekly lab classes \& pre
 \\
 \cvitemwithcomment{}{\textbf{CS USB Help Room Tutor}}{September 2015--December 2015}
 Tutored in CS 180 \textit{Object-Oriented Programming} \& CS 240 \textit{Programming in C}.
-\section{Other Experience}
+\subsection{\textbf{Volunteer Experience}}
 \cvitemwithcomment{}{\textbf{BoilerMake Hackathon Executive Board} (Dev \& User Experience Team)}{January 2016--October 2018}
 Helped plan and organize anything relating to resources/services for the event participants.
-Made a small NodeJS application with a bunch of puzzles. \url{https://github.com/BoilerMake/puzzles-BM4}
+Made \href{https://github.com/BoilerMake/puzzles-BM4}{\underline{a puzzle webapp}}.
 \\
 \cvitemwithcomment{}{\textbf{Purdue FIRST Programs} (IT Team)}{August 2015--December 2016}
 \cvitemwithcomment{}{IT Director}{May 2016--December 2016}
-Led development of a home brewed content management system.
-\textit{Technologies:} Elixir, Phoenix, React, \& Redux.
+Lead IT work for organization that helps support local robotics teams in high schools and middle schools.
+%%Led development of a home brewed content management system.
+%%\textit{Technologies:} Elixir, Phoenix, React, \& Redux.
 %%\\
 %\cvitemwithcomment{}{\textbf{FIRST Robotics Team 461--Westside Boiler Invasion}}{2012--2015}
 %Programmed the robot in C/C++ junior year.
