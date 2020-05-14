@@ -9,7 +9,7 @@
 \usepackage[utf8]{inputenc}
 
 %% Adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage[margin=0.6in]{geometry}
 \usepackage{url}
 
 %% ADD PROFILE PIC TO CV
@@ -33,37 +33,40 @@
 \firstname{Samuel A.}
 \familyname{Mercier}
 %% \title{Résumé}
-%%\address{2809 Covington St.}{West Lafayette, IN 47906}
-%\mobile{+1~(765)-237-9542}
+%\address{Citizenship}{Ireland, United States (Dual Citizen)}
+\address{Citizenship}{United States}
+%%\nationality{United States}
 \email{smercier@purdue.edu}
 \homepage{samercier.com}
 \social[github]{samontea}
 %\photo[64pt][0.4pt]{picture}
 
 
-\addtolength{\voffset}{-50pt}
-\addtolength{\textheight}{150pt}
-\addtolength{\hoffset}{-35pt}
-\addtolength{\textwidth}{70pt}
-
 %% Body
 \begin{document}
-\makecvtitle
-\vspace{-40pt}
+\begin{center}
+\begin{tabular}{r@{\hskip 9pt} l}
+  \LARGE\textbf{Samuel} &\LARGE\textbf{Mercier}\\
+  \url{https://sam.mrcr.us} & sam [at] mrcr [dot] us\\
+  Citizenship: United States Citizen & Github: \url{https://github.com/samontea}
+\end{tabular}
+\end{center}
+%\makecvtitle
 \section{Education}
-\cventry{May 2020}{B.S. in Mathematics Honors, Minor: Computer Science, Philosophy}{Purdue University ({\small College of Science, Honors College})}{West Lafayette, IN}{}{}
-\cvitemwithcomment{Thesis}{An Introduction to Homotopy Colimits in Model Categories}{Forthcoming}
+%%\cventry{May 2020}{Bachelors of Science in Mathematics with Departmental Honors}{Purdue University}{West Lafayette, IN}{ \textit{3.7/4.0} }{Minors: Computer Science, Philosophy}  % arguments 3 to 6 can be left empty
+\cventry{3.7/4.0}{B.S. in Mathematics with Departmental Honors. Minors: Computer Science, Philosophy}{Purdue University ({College of Science, Honors College})}{May 2020}{}{}
+\cvitemwithcomment{Bachelors Thesis}{An Introduction to Homotopy Colimits}{}
 %%\cvitem{}{\emph{Relevant Course Work} MA 572 \textit{Algebraic Topology}, MA 553 \textit{Algebra}}
 \cvitemwithcomment{}{\textbf{Awards:}
-  Purdue Presidential Scholarship, Purdue Marquis Scholarship}{Fall 2015--Spring 2020}
+  Purdue Presidential Scholarship, Purdue Marquis Scholarship}{2015--2020}
 \cvitemwithcomment{}{Senior Achievement Award (Dept.\ of Mathematics)}{Spring 2020}
-\cvitemwithcomment{}{Eugene V. Schenkman Award for the best Algebra student in the Dept.\ of Mathematics}{Spring 2020}
+\cvitemwithcomment{}{E. V. Schenkman Award (Awarded to the best algebra student in the Dept.\ of Mathematics)}{Spring 2020}
 \cvitemwithcomment{}{Thomas Arai Scholarship}{Spring 2019}
-\cvitemwithcomment{}{Mitch Daniels Early Graduate Scholarship}{Fall 2015}
-\cvitemwithcomment{}{\textbf{Honors:} Dean's List}{6 of 7 semesters}
-\cvitemwithcomment{}{The Outstanding Senior in Mathematics}{Spring 2019}
+\cvitemwithcomment{}{M. Daniels Early Graduate Scholarship}{Fall 2015}
+\cvitemwithcomment{}{\textbf{Honors:} Outstanding Senior in Mathematics (Awarded to one senior in Mathematics)}{Spring 2019}
+\cvitemwithcomment{}{Dean's List}{2015-2020}
 %% \cventry{May 2015}{Core 40 with Academic Honors (Honors High School Diploma)}{West Lafayette Jr./Sr. High School}{West Lafayette, IN}{}{}
-
+\vspace{-11pt}
 \section{Experience}
 \subsection{\textbf{Work Experience -- Software Engineering}}
 %\cvitem{}{\textbf{Programming Languages/Frameworks}}
@@ -72,54 +75,70 @@
 %\cvitemwithcomment{}{\textbf{Software Engineer 2} MongoDB (New York) -- Query Team}{August 2020 (Expected)}
 %I will be developing the query subsystem of the NoSQL database in C/C++.
 %\\
-\cvitemwithcomment{}{\textbf{Software Engineer Intern} NASA JPL (Pasadena) -- Modeling \& Verification}{May 2020--July 2020 (Expected)}
-I will be working on a project called ``Next-Generation Modeling and Simulation Software'' in Java this summer. This project supports the Mars 2020 and Europa missions.
+\cvitemwithcomment{}{\textbf{Software Engineer Intern} NASA JPL (Pasadena, CA) -- Modeling \& Verification}{May 2020--Present}
+Developing ``Next-Generation Modeling and Simulation Software'' in Java in support of JPL engineering missions (e.g. Europa Clipper).
 \\
-\cvitemwithcomment{}{\textbf{Software Engineer Intern} Affirm (San Francisco) -- Risk Engineering Team}{September 2019--November 2019}
+\cvitemwithcomment{}{\textbf{Software Engineer Intern} Affirm (San Francisco, CA) -- Risk Engineering Team}{Sept. 2019--Nov. 2019}
 Expanded the functionality of the underwriting microservice.
 Made loan decision tasks asynchronous.
 Expanded integration testing of loan decisioning.
-\textit{Technologies:} Python, SQL, Shell scripting, \& Docker.
+\textit{Technologies:} Python, SQL, \& Docker.
 \\
-\cvitemwithcomment{}{\textbf{Software Engineer Intern} MongoDB (New York) -- Query Team}{May 2018--August 2018 \& May 2019--August 2019}
-Implemented a \href{https://docs.mongodb.com/manual/core/index-wildcard/}{\underline{new index type which can index all fields of all documents in a given collection}}.
+\cvitemwithcomment{}{\textbf{Software Engineer Intern} MongoDB (New York) -- Query Team}{May 2018--Aug. 2018 \& May 2019--Aug. 2019}
+Implemented a new index type which can index all fields of all documents in a given collection.
 Sped up \$lookup queries by 28x according to performance tests.
 Recovered technical debt by rearchitecting projection execution.
 \textit{Technologies:} C++, Python (for testing), \& JavaScript (for testing).
 \\
-\cvitemwithcomment{}{\textbf{Software Engineer Intern} MongoDB (New York) -- Monitoring Team}{May 2017--August 2017}
-Researched and implemented time series analysis techniques for anomaly detection for their ``DaaS'' platform. Integrated into existing alerts framework to create automated anomaly detection alerts.
+\cvitemwithcomment{}{\textbf{Software Engineer Intern} MongoDB (New York) -- Monitoring Team}{May 2017--Aug. 2017}
+Researched and implemented time series analysis techniques for anomaly detection for their ``DaaS'' platform. Created automated anomaly detection alerts.
 \textit{Technologies:} Java \& MongoDB.
 \\
-\cvitemwithcomment{}{\textbf{Web Development Intern in Support of NASA Systems Engineering} NASA JSC}{January 2017--May 2017}
+\cvitemwithcomment{}{\textbf{Web Dev. Intern for NASA Systems Engineering} NASA JSC (Houston, TX)}{Jan. 2017--May 2017}
 Developed requirement management software used throughout NASA.
-Isolated state, and added routing.
+Added routing. Isolated state.
 \\
 %\textit{Technologies:} JavaScript, Node, Angular 1.x, Brunch, \& Redux.\\
-\cvitemwithcomment{}{\textbf{Software Engineer Intern Fullstack} Springbuk (Indianapolis)}{June 2016--August 2016}
-Led development on an external onboarding application.
-Improved frontend/backend communication of product.
+\cvitemwithcomment{}{\textbf{Software Engineer Intern (Fullstack)} Springbuk (Indianapolis, IN)}{June 2016--Aug. 2016}
+Led development on a client onboarding application.
+%Improved frontend/backend communication of product.
 %\\
 %\textit{Technologies:} PostgreSQL with ActiveRecord as a wrapper, Ruby, Ruby on Rails, \& JQuery.
 
 \subsection{\textbf{Work Experience -- Teaching}}
-\cvitemwithcomment{}{\textbf{CS 240 Undergraduate Teaching Assistant}}{Jan. 2016--May 2016 \& Aug. 2016--Dec. 2016 \& Jan. 2020--Present}
-Assisted in teaching CS 240 \textit{Programming in C} in weekly lab classes \& prepared materials (labs, exams, etc.)
-\\
-\cvitemwithcomment{}{\textbf{MA 161/162 Undergraduate Teaching Assistant}}{Aug. 2018--May 2019}
-Answered questions posed by students in ``flipped classroom'' setting for MA 161/162 (\textit{Calculus I/II}).
-\\
-\cvitemwithcomment{}{\textbf{CS 252 Undergraduate Teaching Assistant}}{Jan. 2018--May 2018 \& Aug. 2018--May 2019}
-Assisted in teaching CS 252 \textit{Systems Programming} in weekly lab classes \& prepared materials (labs, exams, etc.)
-\\
-\cvitemwithcomment{}{\textbf{CS USB Help Room Tutor}}{Sept. 2015--Dec. 2015}
-Ran a help room for CS 180 \textit{O.O. Programming} \& CS 240 \textit{Programming in C} for the Computer Science Dept.
+\cvitemwithcomment{}{\textbf{Undergraduate Teaching Assistant} Purdue University}{2015-2020}
+Prepared course materials (labs, homework, exams, etc.) and taught the following courses:\\
+\cvlistdoubleitem{CS 240 (Programming in C) \hfill\textit{Spring 2020}}{CS 252 (Systems Programming) \hfill \textit{Spring 2019}}
+\cvlistdoubleitem{MA 162 (Analytic Geom.\ and Calculus II) \textit{Spring 2019}}{CS 252 (Systems Programming) \hfill \textit{Fall 2018}}
+\cvlistdoubleitem{MA 161 (Analytic Geom.\ and Calculus I) \hfill \textit{Fall 2018}}{CS 252 (Systems Programming) \hfill \textit{Spring 2018}}
+\cvlistdoubleitem{CS 240 (Programming in C) \hfill \textit{Fall 2016}}{CS 240 (Programming in C) \hfill \textit{Spring 2015}}
+
+%% %% \cvitemwithcomment{}{CS 240 (Programming in C) }{Spring 2020}
+%% %% \cvitemwithcomment{}{CS 252 (Systems Programming)}{Spring 2019}
+%% %% \cvitemwithcomment{}{MA 162 (Plane Analytic Geometry And Calculus II)}{Spring 2019}
+%% %% \cvitemwithcomment{}{CS 252 (Systems Programming)}{Fall 2018}
+%% %% \cvitemwithcomment{}{MA 161 (Plane Analytic Geometry And Calculus I) }{Fall 2018}
+%% %% \cvitemwithcomment{}{CS 252 (Systems Programming) }{Spring 2018}
+%% %% \cvitemwithcomment{}{CS 240 (Programming in C)}{Fall 2016}
+%% %% \cvitemwithcomment{}{CS 240 (Programming in C)}{Spring 2016}
+
+%% \cvitemwithcomment{}{\textbf{CS 240 Undergraduate Teaching Assistant}}{Jan. 2016--May 2016 \& Aug. 2016--Dec. 2016 \& Jan. 2020--May 2020}
+%% Assisted in teaching CS 240 \textit{Programming in C} in weekly lab classes \& prepared materials (labs, exams, etc.)
+%% \\
+%% \cvitemwithcomment{}{\textbf{MA 161/162 Undergraduate Teaching Assistant}}{Aug. 2018--May 2019}
+%% Answered questions posed by students in ``flipped classroom'' setting for MA 161/162 (\textit{Calculus I/II}).
+%% \\
+%% \cvitemwithcomment{}{\textbf{CS 252 Undergraduate Teaching Assistant}}{Jan. 2018--May 2018 \& Aug. 2018--May 2019}
+%% Assisted in teaching CS 252 \textit{Systems Programming} in weekly lab classes \& prepared materials (labs, exams, etc.)
+%% \\
+\cvitemwithcomment{}{\textbf{Computer Science Help Room Tutor} Purdue University}{Sept. 2015--Dec. 2015}
+Ran a help room for CS 180 {(Object Oriented Programming)} \& CS 240 {(Programming in C)}.
 
 \subsection{\textbf{Volunteer Experience}}
 \cvitemwithcomment{}{\textbf{BoilerMake Hackathon Executive Board} (Dev \& User Experience Team)}{January 2016--October 2018}
-Helped plan and organize anything relating to resources/services for the event participants.
-Made \href{https://github.com/BoilerMake/puzzles-BM4}{\underline{a puzzle webapp}}.
-\\
+%%Helped plan and organize anything relating to resources/services for the event participants.
+%%Made \href{https://github.com/BoilerMake/puzzles-BM4}{\underline{a puzzle webapp}}.
+%%\\
 \cvitemwithcomment{}{\textbf{Purdue FIRST Programs} (IT Team)}{August 2015--December 2016}
 \cvitemwithcomment{}{IT Director}{May 2016--December 2016}
 Lead IT work for organization that helps support local robotics teams in high schools and middle schools.
