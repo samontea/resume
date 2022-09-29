@@ -8,6 +8,7 @@ cleanup:
 
 $(BASE_FILENAME).pdf: $(BASE_FILENAME).tex
 	pdflatex $(BASE_FILENAME)
+	pdflatex $(BASE_FILENAME)
 	make cleanup
 
 clean: cleanup

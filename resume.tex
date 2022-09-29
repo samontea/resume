@@ -1,15 +1,28 @@
 \documentclass[11pt,letter,sans]{moderncv}
 
 \moderncvstyle{banking}
-\moderncvcolor{black}
+\moderncvcolor{blue}
 \renewcommand{\familydefault}{\sfdefault}
-\nopagenumbers{}
+%\nopagenumbers{}
+
+%% Custom footer
+\usepackage{fancyhdr}
+
+%% lastpage
+\usepackage{lastpage}
+
+%% Dingbats
+\usepackage{wasysym}
+\newcommand{\dingbat}{\color{color1}{\large\photon}}
+
+%% fancier enumerate
+\usepackage{paralist}
 
 %% Character encoding
 \usepackage[utf8]{inputenc}
 
 %% Adjust the page margins
-\usepackage[margin=0.6in]{geometry}
+\usepackage[margin=0.6in, footskip = 0in]{geometry}
 \usepackage{url}
 
 %% ADD PROFILE PIC TO CV
@@ -33,32 +46,43 @@
 \firstname{Samuel A.}
 \familyname{Mercier}
 %% \title{Résumé}
-\address{Citizenship}{Ireland, United States (Dual Citizen)}
+%\address{Citizenship}{Ireland, United States (Dual Citizen)}
 %\address{Citizenship}{United States}
 %%\nationality{United States}
-\email{smercier@purdue.edu}
-\homepage{samercier.com}
-\social[github]{samontea}
+%\email{smercier@purdue.edu}
+%\homepage{samercier.com}
+%\social[github]{samontea}
 %\photo[64pt][0.4pt]{picture}
-
 
 %% Body
 \begin{document}
+\lfoot{made with \LaTeX}
+\rfoot{\thepage{} {out of} \pageref{LastPage}}
+
 \begin{center}
-\begin{tabular}{r@{\hskip 9pt} l}
-  \LARGE\textbf{Samuel} &\LARGE\textbf{Mercier}\\
-  Website: \url{https://sam.mrcr.us} & Email: sam [at] mrcr [dot] us\\
-  Citizenship: Ireland, United States (Dual Citizen) & Github: \url{https://github.com/samontea}
+\begin{tabular}{ r @{\hskip 4.5pt} c @{\hskip 4.5pt} l }
+  \multicolumn{3}{ c }{\LARGE\textbf{Samuel} \LARGE\textbf{\color{color1} Mercier}}\\
+   Website: \url{https://sam.mrcr.uk} & \vline & Email: sam [at] mrcr [dot] uk \\
+  Citizenship: Ireland, United States (Dual Citizen) & \vline & Github: \url{https://github.com/samontea} \\
+
 \end{tabular}
 \end{center}
 %\makecvtitle
 \vspace{-22pt}
+%% \textbf{\textit{Objective:}}
+%% Develop rigorously tested and extensible software systems.
+%% Ensure that software systems server the public by keeping software in the public domain.
+%% Support communities through education.
+%% \vspace{-11pt}
 \section{Education}
+\cventry{}{ M.Sc. in Mathematics and Foundations of Computer Science}{University of Oxford ({Exeter College})}{September 2023 (Expected)}{}{}
 %%\cventry{May 2020}{Bachelors of Science in Mathematics with Departmental Honors}{Purdue University}{West Lafayette, IN}{ \textit{3.7/4.0} }{Minors: Computer Science, Philosophy}  % arguments 3 to 6 can be left empty
-\cventry{}{B.S. in Mathematics with Departmental Honors. Minors: Computer Science, Philosophy.}{Purdue University ({College of Science, Honors College})}{May 2020}{}{}
+\centerline{\dingbat}
+\cventry{}{ B.S. in Mathematics with Departmental Honors. Minors: Computer Science, Philosophy.}{Purdue University ({College of Science, Honors College})}{May 2020}{}{}
 \cvitemwithcomment{Bachelors Thesis}{An Introduction to Homotopy Colimits}{Advisors: Jeremy K. Miller, Paul VanKoughnett}
 %%\cvitem{}{\emph{Relevant Course Work} MA 572 \textit{Algebraic Topology}, MA 553 \textit{Algebra}}
 \cvitem{}{\textbf{Awards \& Honors:}}{}
+
 \cvlistitem{E. V. Schenkman Award (Awarded to the best algebra student in the Dept.\ of Mathematics) \hfill \textit{Spring 2020}}
 \cvlistitem{Outstanding Senior in Mathematics (Awarded to one senior in the Dept.\ of Mathematics)\hfill \textit{Spring 2019}}
 \cvlistitem{Merit scholarships covering 97.5\% of tuition: \hfill \textit{2015--2020}\\ {\small Presidential Scholarship (University), Marquis Scholarship (University), T. Arai Scholarship (Math Dept.), M. Daniels Early Graduation Scholarship (Indiana Gov.)}}
@@ -66,19 +90,27 @@
 %% \cventry{May 2015}{Core 40 with Academic Honors (Honors High School Diploma)}{West Lafayette Jr./Sr. High School}{West Lafayette, IN}{}{}
 \vspace{-11pt}
 \section{Experience}
-\subsection{\textbf{Work Experience -- Software Engineering}}
+\subsection{\textbf{Selected Work Experience -- Software Engineering}}
 %\cvitem{}{\textbf{Programming Languages/Frameworks}}
 %\cvlistdoubleitem{Proficient: C/C++ \& JavaScript}{Familiar: Elixir, Emacs Lisp, Java, Python, \& Ruby}
 
-\cvitemwithcomment{}{\textbf{Software Engineer 2} MongoDB (New York) -- Query Optimization Team}{Aug. 2020--Present}
-\cvitemwithcomment{}{\textbf{Software Engineer Intern} NASA JPL (Pasadena, CA) -- Modeling \& Verification}{May 2020--July 2020}
-Developed ``Next-Generation Modeling and Simulation Software'' in Java in support of JPL engineering missions (e.g. Europa Clipper).
+%\begin{inparaenum}[\expandafter\textsuperscript 1]
+\cvitemwithcomment{}{\textbf{Software Engineer 3} MongoDB (New York, NY) -- Query Optimization Team}{Nov. 2021--Sept. 2022}
+\cvitemwithcomment{}{Software Engineer 2}{Aug. 2020--Oct. 2021}
+Implemented query {\color{color1}language optimizations} and {\color{color1}new language features} for the MongoDB Query Language (MQL).
+Developed {\color{color1}differential testing} stratagies using a fuzzer for the database.
+Extended the {\color{color1}query planner} to support new index types and operators.
+Mentored junior engineers and managed interns.
+Ran projects as a {\color{color1}technical lead}.
+Scoped a project to {\color{color1}open-source} the fuzz testing system.
+Reviewed design documents.\\
+\centerline{\dingbat}
 \\
-\cvitemwithcomment{}{\textbf{Software Engineer Intern} Affirm (San Francisco, CA) -- Risk Engineering Team}{Sept. 2019--Nov. 2019}
-Expanded the functionality of the underwriting microservice.
-Made loan decision tasks asynchronous.
-Expanded integration testing of loan decisioning.
-\textit{Technologies:} Python, SQL, \& Docker.
+\cvitemwithcomment{}{\textbf{Software Engineer Intern} NASA JPL (Pasadena, CA) -- Modeling \& Verification}{May 2020--July 2020}
+Developed ``Next-Generation Modeling and Simulation Software'' in Java in support of JPL engineering missions (e.g. Europa Clipper). Built a {\color{color1}continuous integration} pipeline for daily builds.
+Expanded functionality of the {\color{color1}modeling SDK} by developing Java annotation processors. \textit{Technologies:} Java, Docker, Jenkins, \& Python
+\\
+\centerline{\dingbat}
 \\
 \cvitemwithcomment{}{\textbf{Software Engineer Intern} MongoDB (New York) -- Query Team}{May 2018--Aug. 2018 \& May 2019--Aug. 2019}
 Implemented a new index type which can index all fields of all documents in a given collection.
@@ -86,28 +118,38 @@ Sped up \$lookup queries by 28x according to performance tests.
 Recovered technical debt by rearchitecting projection execution.
 \textit{Technologies:} C++, Python (for testing), \& JavaScript (for testing).
 \\
-\cvitemwithcomment{}{\textbf{Software Engineer Intern} MongoDB (New York) -- Monitoring Team}{May 2017--Aug. 2017}
+\centerline{\dingbat}
+\\
+\cvitemwithcomment{}{\textbf{Software Engineer Intern} MongoDB (New York, NY) -- Monitoring Team}{May 2017--Aug. 2017}
 Researched and implemented time series analysis techniques for anomaly detection for their ``DaaS'' platform. Created automated anomaly detection alerts.
 \textit{Technologies:} Java \& MongoDB.
+\\
+\centerline{\dingbat}
 \\
 \cvitemwithcomment{}{\textbf{Web Dev. Intern for NASA Systems Engineering} NASA JSC (Houston, TX)}{Jan. 2017--May 2017}
 Developed requirement management software used throughout NASA.
 Added routing. Isolated state.
-\\
 %\textit{Technologies:} JavaScript, Node, Angular 1.x, Brunch, \& Redux.\\
-\cvitemwithcomment{}{\textbf{Software Engineer Intern (Fullstack)} Springbuk (Indianapolis, IN)}{June 2016--Aug. 2016}
-Led development on a client onboarding application.
-%Improved frontend/backend communication of product.
-%\\
-%\textit{Technologies:} PostgreSQL with ActiveRecord as a wrapper, Ruby, Ruby on Rails, \& JQuery.
+%\end{inparaenum}
 
 \subsection{\textbf{Work Experience -- Teaching}}
-\cvitemwithcomment{}{\textbf{Undergraduate Teaching Assistant} Purdue University}{2015-2020}
+%\begin{inparaenum}[\expandafter\textsuperscript 1]
+\cvitemwithcomment{}{\textbf{Undergraduate Teaching Assistant} Purdue University}{2016-2020}
 Prepared course materials (labs, homework, exams, etc.) and taught the following courses:\\
-\cvlistdoubleitem{CS 240 (Programming in C) \hfill\textit{Spring 2020}}{CS 252 (Systems Programming) \hfill \textit{Spring 2019}}
-\cvlistdoubleitem{MA 162 (Analytic Geom.\ and Calculus II) \textit{Spring 2019}}{CS 252 (Systems Programming) \hfill \textit{Fall 2018}}
-\cvlistdoubleitem{MA 161 (Analytic Geom.\ and Calculus I) \hfill \textit{Fall 2018}}{CS 252 (Systems Programming) \hfill \textit{Spring 2018}}
-\cvlistdoubleitem{CS 240 (Programming in C) \hfill \textit{Fall 2016}}{CS 240 (Programming in C) \hfill \textit{Spring 2015}}
+\cvlistitem{CS 240 (Programming in C) \hfill Spring 2020, Fall 2016, Spring 2016}
+\cvlistitem{CS 252 (Systems Programming) \hfill Spring 2019, Fall 2018, Spring 2018}
+\cvlistitem{MA 162/MA 161 (Analytic Geom.\ and Calculus II/I) \hfill Spring 2019/Fall 2018 (respectively)}
+%% Spring 2020 \dotfill CS 240 (Programming in C) \\
+%% Spring 2019 \dotfill CS 252 (Systems Programming), MA 162 (Analytic Geom.\ and Calculus II) \\
+%% Fall 2018 \dotfill CS 252, MA 161 (Analytic Geom.\ and Calculus I) \\
+%% Spring 2018 \dotfill CS 252 \\
+%% Fall 2016 \dotfill CS 240 \\
+%% Spring 2015 \dotfill CS 240 \\
+
+%% %% \cvlistdoubleitem{CS 240 (Programming in C) \hfill\textit{Spring 2020}}{CS 252 (Systems Programming) \hfill \textit{Spring 2019}}
+%% %% \cvlistdoubleitem{MA 162 (Analytic Geom.\ and Calculus II) \textit{Spring 2019}}{CS 252 (Systems Programming) \hfill \textit{Fall 2018}}
+%% %% \cvlistdoubleitem{MA 161 (Analytic Geom.\ and Calculus I) \hfill \textit{Fall 2018}}{CS 252 (Systems Programming) \hfill \textit{Spring 2018}}
+%% %% \cvlistdoubleitem{CS 240 (Programming in C) \hfill \textit{Fall 2016}}{CS 240 (Programming in C) \hfill \textit{Spring 2015}}
 
 %% %% \cvitemwithcomment{}{CS 240 (Programming in C) }{Spring 2020}
 %% %% \cvitemwithcomment{}{CS 252 (Systems Programming)}{Spring 2019}
@@ -127,17 +169,26 @@ Prepared course materials (labs, homework, exams, etc.) and taught the following
 %% \cvitemwithcomment{}{\textbf{CS 252 Undergraduate Teaching Assistant}}{Jan. 2018--May 2018 \& Aug. 2018--May 2019}
 %% Assisted in teaching CS 252 \textit{Systems Programming} in weekly lab classes \& prepared materials (labs, exams, etc.)
 %% \\
-\cvitemwithcomment{}{\textbf{Computer Science Help Room Tutor} Purdue University}{Sept. 2015--Dec. 2015}
-Ran a help room for CS 180 {(Object Oriented Programming)} \& CS 240 {(Programming in C)}.
+\centerline{\dingbat}
+\cvitemwithcomment{}{\textbf{CS 180/CS 240} {\footnotesize(Programming in Java/C resp.)} \textbf{Departmental Tutor} Purdue University}{Sept. 2015--Dec. 2015}
+  %$Ran a help room for CS 180 {(Object Oriented Programming)} \& CS 240 {(Programming in C)}.
+%\end{inparaenum}
 
 \subsection{\textbf{Volunteer Experience}}
+%\begin{inparaenum}[\expandafter\textsuperscript 1]
+\cvitemwithcomment{}{\textbf{Tutoring Chicago} Volunteer}{Sept. 2021--May 2022}
+Tutored low-income, middle school students from local public schools in Math, English, Social Studies, and Science. \\
+\centerline{\dingbat}
 \cvitemwithcomment{}{\textbf{BoilerMake Hackathon Executive Board} (Dev \& User Experience Team)}{Jan. 2016--Oct. 2018}
 %%Helped plan and organize anything relating to resources/services for the event participants.
 %%Made \href{https://github.com/BoilerMake/puzzles-BM4}{\underline{a puzzle webapp}}.
 %%\\
+\centerline{\dingbat}
 \cvitemwithcomment{}{\textbf{Purdue FIRST Programs} (IT Team; IT Director)}{Aug. 2015--Dec. 2016}
+%\end{inparaenum}
+
 %\cvitemwithcomment{}{IT Director}{May 2016--Dec. 2016}
-Lead IT work for organization that helps support local robotics teams in high schools and middle schools.
+%%Lead IT work for this organization. They support local robotics teams in high schools and middle schools.
 %%Led development of a home brewed content management system.
 %%\textit{Technologies:} Elixir, Pheonix, React, \& Redux.
 %%\\
@@ -152,4 +203,21 @@ Lead IT work for organization that helps support local robotics teams in high sc
 %\cvitem{}{\textbf{Projects}}
 %\cvlistitem{\textbf{\url{https://github.com/samontea/todoish}} -- A todo list web app with a lot of the features I like from Todoist.}
 %\cvlistitem{\textbf{\url{https://github.com/samontea/pace}} -- A lightweight elixir performance analysis library.}
+
+\subsection{\textbf{Other Work Experience}}
+%\begin{inparaenum}[\expandafter\textsuperscript 1]
+\cvitemwithcomment{}{\textbf{Software Engineer Intern} Affirm (San Francisco, CA) -- Risk Engineering Team}{Sept. 2019--Nov. 2019}
+Expanded the functionality of the underwriting microservice.
+Made loan decision tasks asynchronous.
+Expanded integration testing of loan decisioning.
+\textit{Technologies:} Python, SQL, \& Docker.\\
+\centerline{\dingbat}
+\\
+\cvitemwithcomment{}{\textbf{Software Engineer Intern (Fullstack)} Springbuk (Indianapolis, IN)}{June 2016--Aug. 2016}
+Led development on a client onboarding application.
+%Improved frontend/backend communication of product.
+%\\
+%\textit{Technologies:} PostgreSQL with ActiveRecord as a wrapper, Ruby, Ruby on Rails, \& JQuery.
+%%\end{inparaenum}
+
 \end{document}
